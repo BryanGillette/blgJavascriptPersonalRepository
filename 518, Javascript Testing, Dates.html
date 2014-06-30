@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>518</title>
+	<style>
+#pagecontainer{
+	background-color: wheat; width: 50%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: tan;
+}
+	</style>
+</head>
+<body>
+<div id="pagecontainer">
+	<h2>518, Javascript Testing, Dates</h2>
+ 
+<SCRIPT LANGUAGE=JavaScript>
+
+// Useful Utility Functions
+
+function dw(s){
+	document.write(s + "<br>");
+}
+
+function vw(vs){
+	document.write(vs+"="+eval(vs)+"<br>");
+}
+
+function dump_array(a){
+	for (i in a){
+		document.write(a[i]+"<br>");
+	}
+	document.write("<br />");
+}
+
+function dump_array_string(as){
+	var a = eval(as);
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;Array '" + as + "'(" + a.length + ")" + " = <br />");
+	for (i in a){
+		document.write(a[i] + "<br>");
+	}
+	// document.write(a.toString()+"<br>");
+	// document.write(a.valueOf()+"<br>");
+	document.write("<br />");
+}
+
+// Start Date Exploration
+
+dateobject01=new Date();
+dateobject02=new Date(1000000);
+dateobject03=new Date("06/15/2014");
+dateobject04=new Date(1949, 07, 15, 21, 31, 41, 51);
+dateobject05=new Date(1);
+
+document.write(dateobject01);
+document.write("<br />");
+document.write(dateobject02);
+document.write("<br />");
+document.write(dateobject03);
+document.write("<br />");
+document.write(dateobject04);
+document.write("<br />");
+document.write(dateobject05);
+document.write("<br />");
+document.write(dateobject04.getDate());
+document.write("<br />");
+document.write(dateobject04.getDay());
+document.write("<br />");
+document.write(dateobject04.getFullYear());
+document.write("<br />");
+document.write(dateobject04.getHours());
+document.write("<br />");
+document.write(dateobject04.getMilliseconds());
+document.write("<br />");
+document.write(dateobject04.getMinutes());
+document.write("<br />");
+document.write(dateobject04.getMonth());
+document.write("<br />");
+document.write(dateobject04.getSeconds());
+document.write("<br />");
+document.write(dateobject04.getTime());
+document.write("<br />");
+document.write(dateobject04.getTimezoneOffset());
+document.write("<br />");
+document.write(dateobject04.getUTCDate());
+document.write("<br />");
+document.write(dateobject04.getUTCDay());
+document.write("<br />");
+document.write(dateobject04.getUTCFullYear());
+document.write("<br />");
+document.write(dateobject04.getUTCHours());
+document.write("<br />");
+document.write(dateobject04.getUTCMilliseconds());
+document.write("<br />");
+document.write(dateobject04.getUTCMinutes());
+document.write("<br />");
+document.write(dateobject04.getUTCMonth());
+document.write("<br />");
+document.write(dateobject04.getUTCSeconds());
+document.write("<br />");
+// document.write(dateobject04.getYear());
+document.write(dateobject04.toDateString());
+document.write("<br />");
+document.write(dateobject04.toGMTString());
+document.write("<br />");
+document.write(dateobject04.toISOString());
+document.write("<br />");
+document.write(dateobject04.JSON());
+document.write("<br />");
+document.write(dateobject04.toLocaleDateString());
+document.write("<br />");
+document.write(dateobject04.toLocaleTimeString());
+document.write("<br />");
+document.write(dateobject04.toLocaleString());
+document.write("<br />");
+document.write(dateobject04.toString());
+document.write("<br />");
+document.write(dateobject04.toTimeString());
+document.write("<br />");
+document.write(dateobject04.toUTCString());
+document.write("<br />");
+document.write(dateobject04.UTC());
+document.write("<br />");
+document.write(dateobject04.valueOf());
+document.write("<br />");
+// document.write(dateobject04.());
+// document.write();
+
+
+
+
+</script>
+
+</div><!--#pagecontainer-->
+</body>
+</html>
