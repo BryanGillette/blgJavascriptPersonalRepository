@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>521</title>
+	<style>
+#pagecontainer{
+	background-color: #888; width: 90%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: #999;
+}
+	</style>
+</head>
+<body>
+<div id="pagecontainer">
+	<h2>521</h2>
+
+
+
+
+ 
+<SCRIPT LANGUAGE=JavaScript>
+
+// Useful Utility Functions
+
+//dump_write
+function dw(s){
+	document.write(s + "<br>");
+}
+
+//dump_variable
+// dv = vw
+function dv(vs){
+	document.write("var " + vs + " = " + eval(vs) + ";<br>");
+}
+
+function list_array(a){
+	for (i in a){
+		document.write(a[i]+"<br>");
+	}
+	document.write("<br />");
+}
+
+function list_array_string(as){
+	var a = eval(as);
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;Array '" + as + "'(" + a.length + ")" + " = <br />");
+	for (i in a){
+		document.write(a[i] + "<br>");
+	}
+	// document.write(a.toString()+"<br>");
+	// document.write(a.valueOf()+"<br>");
+	document.write("<br />");
+}
+
+function dump_object(oos){
+	oo = eval(oos)
+	for (index in oo){
+		document.write(oos + "." + index + " = " + oo[index] + "<br>")
+	}
+	document.write("<br>")
+}
+
+function dump_object2(oos){
+	oo = eval(oos)
+	for (index in oo){
+		document.write(oos + "[\"" + index + "\"] = " + oo[index] + "<br>")
+	}
+	document.write("<br>")
+}
+
+// Testing Javascript, Geometric Formulars
+
+arraystring01 = "stapler, pen, pencil, ruler, sissors, marker, punch, paper, eraser"
+array01 = arraystring01.split(", ")
+list_array(array01)
+list_array_string('array01')
+// dump_string(s)
+// dump_variable(vs)
+// dump_array(as)
+// dump_number(ns)
+// dump_function(fs)
+// dump_object(os)
+// dump_boolean(bs)
+// dump_date(ds)
+// ds = dump_string
+// dv = dump_variable
+// da = dump_array
+// dn = dump_number
+// df = dump_function
+// doo = dump_object
+// db = dump_boolean
+// dd = dump_date
+dv("array01")
+dv("arraystring01")
+numbervariable01 = 123
+dv("numbervariable01")
+numbervariable02 = 8456.12379
+dv("numbervariable02")
+dv("dv")
+balloon01 = {color: 'red', size: 12, material: 'latex', support: "stick", price: 1.29}
+dv("balloon01")
+list_array_string("balloon01")
+dump_object("balloon01")
+dump_object2("balloon01")
+boolean01 = true
+boolean02 = false
+boolean03 = 123
+boolean04 = 0
+boolean05 = -1
+dv("boolean01")
+dv("boolean02")
+dv("boolean03")
+dv("boolean04")
+dv("boolean05")
+date01 = new Date()
+dv('date01')
+	document.write("<br>")
+
+// End of my standard dumping formulars
+
+// 
+
+function return_average() {
+    var sum = 0;
+    for (var i = 0, j = arguments.length; i < j; i++) {
+        sum += arguments[i];
+    }
+    return sum / arguments.length;
+}
+
+average01 = return_average( 38, 28, 38, 18, 48, 98, 78, 88, 68, 58)
+dv("average01")
+average02 = return_average(987, 876, 765, 654, 543, 432, 321)
+dv("average02")
+
+function return_average_of_array(arr) {
+    var sum = 0;
+    for (var i = 0, j = arr.length; i < j; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}
+
+array33 = [19, 28, 37, 46, 55]
+arrayaverage22 = return_average_of_array(array33)
+dv('arrayaverage22')
+
+arrayaverage33 = return_average.apply(null, array33)
+dv('arrayaverage33')
+
+anonymous_average = function(){
+    var sum = 0;
+    for (var i = 0, j = arguments.length; i < j; i++) {
+        sum += arguments[i];
+    }
+    return sum / arguments.length;
+}
+
+arrayaverage44 = anonymous_average(99, 88, 66, 55, 33, 22)
+dv('arrayaverage44')
+
+
+
+
+
+	document.write("<br>")
+
+// Now, array.method testing
+
+// arraybefore
+// arrayafter
+// returned
+
+// testarraymethodstring = "a.toString(), a.LocaleString(), a.pop(), a.reverse(), a.shift()"
+// tamsa = testarraymethodstring.split(", ")
+// dv("tamsa")
+
+// function dump_array_method(ams ){
+// 	document.write("array before using method:  ")
+// 	document.write("array after using method:  ")
+// 	document.write("returned from method:  ")
+// }
+
+// 	document.write("array before using method:  ", dv('array'))
+// returnedfrommethod = array.pop()
+// dv('returnedfrommethod')
+// 	document.write("array after using method:  ", dv('array'))
+
+
+function dump_array_popp(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.pop()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_reverse(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.reverse()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+
+function dump_array_shift(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.shift()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_toString(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.toString()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_toLocaleString(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.toLocaleString()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_join(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.join(" - ")
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_slice(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.slice(2, 4)
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_sort(aas){
+	a = eval(aas)
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.sort()
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_unshift(aas){
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.unshift("perpended to start of array")
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_splice(aas){
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.splice(2, 2, "replacement towels", "towels 2", "towels 3")
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_push(aas){
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.push("after thought one", "after thought two", "after thought three")
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+function dump_array_concat(aas){
+	document.write("<b> array before using method:  </b> ")
+	dv(aas)
+	rfm = a.concat("cat 01", "Cat two", "Big Cat three")
+	document.write("<b> returned from method:    </b> ")
+	dv('rfm')
+	document.write("<b> array after using method:    </b> ")
+	dv(aas)
+	document.write("<br>")
+}
+
+dump_array_popp("array01")
+dump_array_reverse("array01")
+dump_array_shift("array01")
+dump_array_toString("array01")
+dump_array_toLocaleString("array01")
+dump_array_join("array01")
+dump_array_slice("array01")
+dump_array_sort("array01")
+dump_array_unshift("array01")
+dump_array_splice("array01")
+dump_array_push("array01")
+dump_array_concat("array01")
+
+
+
+
+
+
+
+
+
+</script>
+
+</div><!--#pagecontainer-->
+</body>
+</html>
