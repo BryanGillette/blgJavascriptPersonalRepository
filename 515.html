@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>515</title>
+	<style>
+#pagecontainer{
+	background-color: wheat; width: 50%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: tan;
+}
+	</style>
+</head>
+<body>
+<div id="pagecontainer">
+	<h2>515, Testing Javascript, Store Projections</h2>
+
+<form id="projectionform">
+
+	#Stores Previously: <input type="text" name="nprev"><br>
+	Date Previously:    <input type="text" name="dateprev"><br>
+
+	#Stores Now:        <input type="text" name="nnow"><br>
+	Date Now:           <input type="text" name="datenow"><br>
+
+	#Stores Target:     <input type="text" name="ntarget"><br>
+	Date Target:         <input type="text" name="datetarget"><br>
+
+	<input type="button" value="Hello world!">
+	<button onclick="show_in_new_window()">Try it</button>
+
+</form><!--#projectionform-->
+
+<table border="0" cellpadding="4" cellspacing="0" bgcolor="#cccccc">
+<form name="prop">
+ <tr>
+  <td colspan="4" style="color: #fff; background: #000080;">
+    <b>Geometric Properties of a Triangle</b></font>
+  </td>
+ </tr><tr>
+  <td>
+    <b>Side A: </b>
+  </td>
+  <td>
+    <input type="text" size="4" name="A" style="font-size: 9pt">
+  </td>
+  <td>
+    <b>Area of Triangle: </b>
+  </td>
+  <td>
+    <input type="text" size="8" name="area" disabled="disabled" style="color: #000; background: #fff; font-size: 9pt; text-align: right;">
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <b>Side B: </b>
+  </td>
+  <td>
+    <input type="text" size="4" name="B" style="font-size: 9pt">
+  </td>
+  <td>
+    <b>Area of Largest Inscribed Circle: </b>
+  </td>
+  <td>
+    <input type="text" size="8" name="lic" disabled="disabled" style="color: #000; background: #fff; font-size: 9pt; text-align: right;">
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <b>Side C: </b>
+  </td>
+  <td>
+    <input type="text" size="4" name="C" style="font-size: 9pt">
+  </td>
+  <td>
+    <b>Area of Smallest Inscribed Circle: </b>
+  </td>
+  <td>
+    <input type="text" size="8" name="sic" disabled="disabled" style="color: #000; background: #fff; font-size: 9pt; text-align: right;">
+  </td>
+ </tr>
+ <tr>
+  <td>
+    <input type="reset" value="Reset" style="font-size: 9pt" onClick="reset()">
+  </td>
+  <td>
+    <input type="button" value="Compute" style="font-size: 9pt" onClick="getProp()">
+  </td>
+  <td>
+    <b>Angle between A and B: </b>
+  </td>
+  <td>
+    <input type="text" size="8" name="ang" disabled="disabled" style="color: #000; background: #fff; font-size: 9pt; text-align: right;">
+  </td>
+ </tr>
+</form>
+</table>
+
+<script>
+/* This script and many more are available free online at
+	The JavaScript Source!! http://www.javascriptsource.com
+	Created by: Sandeep Gangadharan | http://sivamdesign.com/scripts/ */
+	function getProp() {
+	  var A = document.prop.A.value;
+	  var B = document.prop.B.value;
+	  var C = document.prop.C.value;
+	  var S = (parseInt(A) + parseInt(B) + parseInt(C)) / 2;
+	  var Z = parseInt((A*A)+(B*B)-(C*C))/parseInt(2*A*B);
+	
+	  document.prop.area.value = Math.round(Math.sqrt(S*(S-A)*(S-B)*(S-C)) * 10000) / 10000;
+	  document.prop.lic.value = Math.round(Math.PI * (document.prop.area.value/S) * (document.prop.area.value/S) * 10000) / 10000;
+	  document.prop.sic.value = Math.round(Math.PI * ((A*B*C)/(4*(document.prop.area.value))) * ((A*B*C)/(4*(document.prop.area.value))) * 10000) / 10000;
+	  document.prop.ang.value = Math.round(Math.atan(Math.sqrt((1/(Z * Z))-1)) * (180/Math.PI) * 10000) / 10000;
+	}
+</script>
+
+
+<script>
+
+
+
+
+var numberofpreviousstores = document.projectionform.nprev.value;
+var previousdate           = document.projectionform.dateprev.value;
+var numberofstoresnow      = document.projectionform.nnow.value;
+var datenow                = document.projectionform.datenow.value;
+var targetnumberofstores   = document.projectionform.ntarget.value;
+var targetdate             = document.projectionform.datetarget.value;
+
+
+// var numberofpreviousstores = document.getElementById("nprev").innerHTML;
+// var previousdate           = document.getElementById("dateprev").innerHTML;
+// var numberofstoresnow      = document.getElementById("nnow").innerHTML;
+// var datenow                = document.getElementById("datenow").innerHTML;
+// var targetnumberofstores   = document.getElementById("ntarget").innerHTML;
+// var targetdate             = document.getElementById("datetarget").innerHTML;
+
+function dw(s){
+	document.write(s + "<br />");
+}
+
+function dump_form(){
+	dw(numberofpreviousstores);
+	dw(previousdate);
+	dw(numberofstoresnow);
+	dw(datenow);
+	dw(targetnumberofstores);
+	dw(targetdate);	
+}
+
+function see_the_results() {
+    document.open("text/html","replace");
+    document.write('about to dump the form.');
+    // dump_form();
+    document.close();
+}
+
+function show_in_new_window() {
+    var w = window.open();
+    w.document.open();
+    w.document.write("<h1>Hello World!</h1>");
+    w.document.write(numberofpreviousstores);
+    w.document.close();
+}
+
+</script>
+
+</div><!--#pagecontainer-->
+</body>
+</html>
