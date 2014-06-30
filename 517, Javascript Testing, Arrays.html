@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>517</title>
+	<style>
+#pagecontainer{
+	background-color: wheat; width: 50%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: tan;
+}
+	</style>
+</head>
+<body>
+<div id="pagecontainer">
+	<h2>517, Javascript Testing, Arrays
+
+ 
+<SCRIPT LANGUAGE=JavaScript>
+
+array20=['cup', 'glass', 'bowl'];
+array21=[201.345, 456.987, 888.777];
+array22=[987, 876, 765];
+array23=[true, false, true];
+array24=['music', 876.765, false, 4556];
+var variable01=234, variable02=true, variable03=456.456, variable04='paper';
+array25=[variable01, variable02, variable03, variable04];
+
+function dw(s){
+	document.write(s + "<br>");
+}
+
+function vw(vs){
+	document.write(vs+"="+eval(vs)+"<br>");
+}
+
+function dump_array(a){
+	for (i in a){
+		document.write(a[i]+"<br>");
+	}
+	document.write("<br />");
+}
+
+function dump_array_string(as){
+	var a = eval(as);
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;Array '" + as + "'(" + a.length + ")" + " = <br />");
+	for (i in a){
+		document.write(a[i] + "<br>");
+	}
+	// document.write(a.toString()+"<br>");
+	// document.write(a.valueOf()+"<br>");
+	document.write("<br />");
+}
+
+vw("");
+vw("array20");
+vw("array21");
+vw("array22");
+vw("array23");
+vw("variable01");
+vw("variable02");
+vw("variable03");
+vw("variable04");
+vw("array25");
+vw("variable01 + variable03");
+vw("");
+
+dump_array(array20);
+dump_array(array21);
+dump_array(array22);
+dump_array(array23);
+dump_array(array24);
+dump_array(array25);
+
+dump_array_string("array20");
+dump_array_string("array21");
+dump_array_string("array22");
+dump_array_string("array23");
+dump_array_string("array24");
+dump_array_string("array25");
+
+// dump_array(variable01);
+// dump_array(variable02);
+// dump_array(variable03;
+// dump_array(variable04);
+
+array26=array20.concat(array21, array22, array23, array24, array25);
+dump_array_string("array26");
+
+var variable27 = array20.indexOf("bowl");
+vw("variable27");
+
+var variable28 = array20.join();
+vw("variable28");
+
+var variable29 = array20.lastIndexOf("bowl");
+vw("variable29");
+
+var variable30 = array20.pop();
+vw("variable30");
+dump_array_string("array20");
+
+var variable31 = array20.push("silverware", "dishware", "glassware");
+vw("variable31");
+dump_array_string("array20");
+
+array20.reverse();
+dump_array_string("array20");
+
+array20.sort();
+dump_array_string("array20");
+
+var variable32 = array20.shift();
+vw("variable32");
+dump_array_string("array20");
+
+var variable36 = array20.unshift("spatula", "slotted spoon", "whisk");
+vw("variable36");
+dump_array_string("array20");
+
+array33=["cat", "hat", "bat", "vat", "mat", "tap", "nap", "map", "zap", "pat", "rat", "sat", "fat"];
+dump_array_string("array33");
+
+array34=array33.slice(3, 5, "gap");
+dump_array_string("array34");
+dump_array_string("array33");
+
+array35=array33.splice(3, 5, "dap", "hap", "fap");
+dump_array_string("array35");
+dump_array_string("array33");
+
+
+
+
+</script>
+
+</div><!--#pagecontainer-->
+</body>
+</html>
