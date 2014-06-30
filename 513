@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>513</title>
+	<style>
+#pagecontainer{
+	background-color: wheat; width: 50%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: tan;
+}
+	</style>
+</head>
+<body>
+
+	<div id="pagecontainer">
+		<h2>513, Testing Javascript, Object Dumping</h2>
+		<div>Hello, today, I am your Welcome Mat.  ; ^ ></div>
+<script>
+	document.write("This is the start of the scripting.");
+	// document.write=function dw(s){s + "<br>"};
+	function dw(s){
+		document.write(s + "<br />");
+	}
+	// document.write=dw;
+dw("");
+</script>
+
+<script>
+function KITE(kn){
+	this.kitename=kn;
+	this.kiteweight="";
+	this.kitematerial="";
+	this.sparmaterial="";
+	this.kitetype="";
+	this.kitecolor="";
+	this.kiteheight="";
+	this.kitewidth="";
+	this.kitethickness="";
+	this.bowedthickness="";
+	this.sailarea="";
+	this.liftingpull="";
+	this.liftingangle="";
+	this.tailrequirements="";
+	this.usefulness="";
+	this.stabilityrating="";
+	this.windrange="";
+	this.contructiontime="";
+	this.materialcost="";
+	this.kitemaker="";
+	this.placesflown="";
+	this.competitionsentered="";
+	this.awardswon="";
+	this.stillphotographs="";
+	this.flyingphotographs="";
+	this.currentowner="Bryan L. Gillette";
+	this.currentownerphonenumber="";
+	this.currentowneraddress="";
+	this.currentowneremailaddress="";
+	this.currentvaluation="";
+	this.highestheightflown="";
+	this.longestlengthoflineletout="";
+	this.heaviestpayloadlifted="";
+	this.longesttimealoft="";
+	this.numberoftimesflown="";
+	this.recommendedline="";
+	// this.toString(){kitename};
+}
+
+kite01 = new KITE("Bryan Sled 01");
+kite02 = new KITE("Bryan Sled 02");
+kite03 = new KITE("Bryan Sled 03");
+
+document.write(kite01);
+dw("");
+document.write("Thank You for Calling Magento Go today.");
+dw("");
+document.write(kite01.currentowner);
+dw("");
+document.write(kite01.kitename);
+dw("");
+dw(kite01.currentowner);
+dw(kite01.kitename);
+
+	</script>
+
+	</div><!--#pagecontainer-->
+</body>
+</html>
