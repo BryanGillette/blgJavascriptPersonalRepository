@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>519</title>
+	<style>
+#pagecontainer{
+	background-color: wheat; width: 50%; margin: auto; padding: 1em 3em;
+}
+body{
+	background-color: tan;
+}
+	</style>
+</head>
+<body>
+<div id="pagecontainer">
+	<h2>51, Javascript Testing, Geometric Formulars</h2>
+ 
+<SCRIPT LANGUAGE=JavaScript>
+
+// Useful Utility Functions
+
+function dw(s){
+	document.write(s + "<br>");
+}
+
+function vw(vs){
+	document.write(vs+"="+eval(vs)+"<br>");
+}
+
+function dump_array(a){
+	for (i in a){
+		document.write(a[i]+"<br>");
+	}
+	document.write("<br />");
+}
+
+function dump_array_string(as){
+	var a = eval(as);
+	document.write("&nbsp;&nbsp;&nbsp;&nbsp;Array '" + as + "'(" + a.length + ")" + " = <br />");
+	for (i in a){
+		document.write(a[i] + "<br>");
+	}
+	// document.write(a.toString()+"<br>");
+	// document.write(a.valueOf()+"<br>");
+	document.write("<br />");
+}
+
+// Testing Javascript, Geometric Formulars
+
+function square_area(lengthofoneside){
+	return lengthofoneside * lengthofoneside
+}
+function rectangle_area(sidea, sideb){
+	return sidea * sideb
+}
+function parallelogram_area(base, height){
+	return base * height
+}
+function trapezoid_area(base, height, top){
+	return (base + top)/2 * height
+}
+function circle_area(radius){
+	return Math.PI * radius * radius
+}
+function ellipse_area(minorradius, majorradius){
+	return Math.PI * minorradius * majorradius
+}
+function triangle_area(base, height){
+	return base * height / 2
+}
+function cube_volume(side){
+	return side*side*side
+}
+function rectangular_prism_volume(side1, side2, side3){
+	return side1 * side2 * side3
+}
+function irregular_prism_volume(basearea, height){
+	return basearea * height
+}
+function cylinder_volume(radius, height){
+	return Math.PI * radius * radius * height
+}
+function pyramid_volume(base, height){
+	return base * height / 3
+}
+function square_pyramid_volume(side, height){
+	return side * side * height / 3
+}
+function rectangular_pyramid_volume(side1, side2, height){
+	return side1 * side2 * height / 3
+}
+function cone_volume(radius, height){
+	return Math.PI * radius * radius * height / 3
+}
+function sphere_volume(radius){
+	return Math.PI * radius * radius * radius * 4 / 3
+}
+function ellipsoid_volume(radius1, radius2, radius3){
+	return Math.PI * radius1 * radius2 * radius3 * 4 / 3
+}
+function cube_surface_area(side){
+	return 6 * side * side
+}
+function rectangular_prism_surface_area(side1, side2, side3){
+	return 2 * (a*b + b*c + c*a)
+}
+function prisim_surface_area(basearea, baseperimeter, length){
+	return basearea * 2 + baseperimeter * length
+}
+function sphere_surface_area(radius){
+	return Math.PI * radius * radius * 4
+}
+function cylinder_surface_area(radius, height){
+	return 2 * Math.PI * radius * radius + 2 * Math.PI * radius * height
+}
+function circle_circumference(radius){
+	return Math.PI * 2 * radius
+}
+function arc_length(radius, angle){
+	return angle * radius
+}
+function circle_sector_area(radius, angle){
+	return angle / (2 * Math.PI) * Math.PI * radius * radius
+}
+function square_perimeter(side){
+	return 4 * side
+}
+function rectangle_perimeter(side1, side2){
+	return 2 * (side1 + side2)
+}
+function triangle_permieter(side1, side2, side3){
+	return side1 + side2 + side3
+}
+function equilateral_triangle_perimeter(side){
+	return side + side + side
+}
+function isoceles_triange_perimeter(bottom, sides){
+	return bottom + sides + sides
+}
+function circle_perimeter(radius){
+	return Math.PI * 2 * radius
+}
+
+// document.write(circle_perimeter(5) + "<br>")
+// document.write("The perimeter of a circle with a radius of " + 5 + " is " + circle_perimeter(5) + ".<br>")
+
+// function CIRCLE(radius){
+// 	this.radius = radius
+// 	// this.circle_perimeter = circle_perimeter
+// 	function circle_perimeter_dump(){
+// 		// document.write("The perimeter of a circle with a radius of " + " is " + ".<br>")
+// 		document.write("The perimeter of a circle with a radius of " + radius + " is " + circle_perimeter(radius) + ".<br>")
+// 	}
+// 	this.circle_perimeter_dump = circle_perimeter_dump
+// }
+
+// circle01 = new CIRCLE(6)
+// document.write(circle01.radius)
+// document.write("<br>")
+// circle01.circle_perimeter_dump()
+
+//
+
+function RECTANGLE(s1, s2){
+	this.side1 = s1
+	this.side2 = s2
+	this.area = this.side1 * this.side2
+	this.perimeter = 2 * (this.side2 + this.side1)
+	// this.corners# = 4
+	// this.edges# = 4
+	// this.surface# = 1
+	this.name = "A rectangle of Bryan's"
+}
+
+rectangle01 = new RECTANGLE(5, 7)
+rectangle02 = new RECTANGLE(11, 13)
+
+vw("rectangle01")
+vw("rectangle01.side1")
+vw("rectangle01.side2")
+vw("rectangle01.area")
+vw("rectangle01.perimeter")
+// vw("rectangle01.corners#")
+// vw("rectangle01.edges#")
+// vw("rectangle01.surface#")
+vw("rectangle01.name")
+
+rectangle01.side1 = 50
+rectangle01.side2 = 70
+
+vw("rectangle01")
+vw("rectangle01.side1")
+vw("rectangle01.side2")
+vw("rectangle01.area")
+vw("rectangle01.perimeter")
+vw("rectangle01.name")
+
+dw("<hr> ")
+
+function RECTANGLE2(s1, s2){
+	this.side1 = s1
+	this.side2 = s2
+	function rectangle_area(){
+		return this.side1 * this.side2
+	}
+	this.area = rectangle_area()
+	//this.area = this.side1 * this.side2
+	this.perimeter = 2 * (this.side2 + this.side1)
+	// this.corners# = 4
+	// this.edges# = 4
+	// this.surface# = 1
+	this.name = "A rectangle of Bryan's"
+}
+
+rectangle01 = new RECTANGLE2(5, 7)
+rectangle02 = new RECTANGLE2(11, 13)
+
+vw("rectangle01")
+vw("rectangle01.side1")
+vw("rectangle01.side2")
+vw("rectangle01.area")
+vw("rectangle01.perimeter")
+// vw("rectangle01.corners#")
+// vw("rectangle01.edges#")
+// vw("rectangle01.surface#")
+vw("rectangle01.name")
+
+rectangle01.side1 = 50
+rectangle01.side2 = 70
+
+vw("rectangle01")
+vw("rectangle01.side1")
+vw("rectangle01.side2")
+vw("rectangle01.area")
+vw("rectangle01.perimeter")
+vw("rectangle01.name")
+
+
+
+
+
+
+
+</script>
+
+</div><!--#pagecontainer-->
+</body>
+</html>
